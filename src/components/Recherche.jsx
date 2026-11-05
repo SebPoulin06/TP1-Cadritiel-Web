@@ -1,16 +1,21 @@
 import { useState } from "react";
+import { preconnect } from "react-dom";
 
 
-function Recherche({recherche, setRecherche}){
+function Recherche({recherche, setRecherche, lancerRecherche}){
 
     function gererChangement(e) {
         const {name, value} = e.target;
         setRecherche((precedent) => ({...precedent, [name]: value}));
     }
+    function gererSoumission(e) {
+        e.preventDefault();
+        lancerRecherche();
+    }
 
     return(
-        <div className="recherche">
-            <label>Recherche</label>
+        <form className="recherche" onSubmit={gererSoumission}>
+            
             <input 
             type="text" 
             name="recherche" 
@@ -18,7 +23,9 @@ function Recherche({recherche, setRecherche}){
             value={recherche.recherche || ""}
             onChange={gererChangement} 
             />
-        </div>
+
+            <button type="submit">Rechercher</button>
+        </form>
     )
 
 }
