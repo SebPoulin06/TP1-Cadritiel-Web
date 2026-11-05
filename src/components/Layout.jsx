@@ -22,7 +22,7 @@ function Layout(){
 
             <footer>
                 <hr />
-                <p> Application Éducative - PlayBase - Sebastien Poulin</p>
+                <p> Application Éducative - CineVault - Sebastien Poulin</p>
             </footer>
         </>
     )

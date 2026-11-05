@@ -2,7 +2,7 @@ function Acceuil(){
     return(
         <>
             <div>
-                <h1>Bienvenue sur PlayBase!</h1>
+                <h1>Bienvenue sur CineVault!</h1>
             </div>
         </>
     )
