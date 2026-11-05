@@ -1,6 +1,7 @@
 import useFetch from "../hooks/useFetch";
 import CarteFilm from "../components/CarteFilm";
 import Recherche from "../components/Recherche";
+import NonTrouve from "./NonTrouve";
 import { useState } from "react";
 
 function Catalogue(){
@@ -26,6 +27,12 @@ function Catalogue(){
         setPage(1);
     }
 
+    function retourCatalogue() {
+        setRecherche({ recherche: "" });
+        setRechercheActive("");
+        setPage(1);
+    }
+
     if(isLoading){
         return (
             <p>Chargement du catalogue...</p>
@@ -44,8 +51,11 @@ function Catalogue(){
 
             <Recherche recherche={recherche} setRecherche={changerRecherche} lancerRecherche={lancerRecherche}/>
 
+            {donnees?.results?.length === 0 && (
+                <NonTrouve recherche={rechercheActive} onRetour={retourCatalogue}/>
+            )}
+
             <div className="films-grid">
-                {donnees?.results?.length === 0 && (<p>Aucun film trouvé.</p>)}
 
                 {donnees?.results?.map((film) => (
                     <CarteFilm key={film.id} film={film} />

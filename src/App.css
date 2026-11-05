@@ -254,6 +254,91 @@ body {
 }
 
 
+.film-introuvable {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background-color: #ffffff;
+  border: 1px solid #e1e5ed;
+  border-radius: 16px;
+
+  padding: 65px 25px;
+  margin: 35px auto;
+  max-width: 650px;
+
+  box-shadow: 0 4px 18px rgba(20, 35, 60, 0.06);
+}
+
+.introuvable-icone {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+}
+
+.film-introuvable h2 {
+  color: #17263f;
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.film-introuvable p {
+  color: #66758b;
+  line-height: 1.6;
+  margin: 5px 0;
+}
+
+.film-introuvable button {
+  margin-top: 25px;
+  background-color: #304e78;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 22px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.film-introuvable button:hover {
+  background-color: #17263f;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 40px 0 20px;
+}
+
+.pagination button {
+  background-color: #304e78;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #17263f;
+}
+
+.pagination button:disabled {
+  background-color: #cbd3df;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  color: #526781;
+  font-weight: 600;
+}
+
+
+
 /* Responsive */
 
 @media (max-width: 600px) {
@@ -292,5 +377,13 @@ body {
 
   .detail-infos h1 {
     font-size: 1.7rem;
+  }
+
+  .pagination {
+    gap: 10px;
+  }
+
+  .pagination button {
+    padding: 10px 12px;
   }
 }
