@@ -5,26 +5,24 @@ import { Link, Outlet, NavLink } from "react-router-dom";
 function Layout(){
 
     return(
-        <>
-            <header>
-                <nav>
+        <div className="layout">
+            <header className="site-header">
+                <nav className="site-nav">
                     <NavLink to="/">Acceuil</NavLink>
                     <NavLink to="/catalogue">Catalogue</NavLink>
                     
                 </nav>
                 
-                <hr />
             </header>
 
-            <main>
+            <main className="site-footer">
                 <Outlet />
             </main>
 
-            <footer>
-                <hr />
+            <footer className="site-footer">
                 <p> Application Éducative - CineVault - Sebastien Poulin</p>
             </footer>
-        </>
+        </div>
     )
 }
 
