@@ -338,6 +338,123 @@ body {
 }
 
 
+.accueil {
+  width: 100%;
+}
+
+/* Section principale */
+
+.accueil-hero {
+  background-color: #17263f;
+  color: white;
+  padding: 65px 50px;
+  border-radius: 16px;
+  text-align: left;
+}
+
+.accueil-marque {
+  display: inline-block;
+  color: #c9d9f0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.accueil-hero h1 {
+  color: #ffffff;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin: 0 0 20px;
+  line-height: 1.2;
+}
+
+.accueil-hero p {
+  color: #d6e0ee;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.accueil-bouton {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #17263f;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.accueil-bouton:hover {
+  background-color: #e8eef7;
+  transform: translateY(-2px);
+}
+
+/* Collections */
+
+.accueil-collections {
+  margin-top: 55px;
+}
+
+.accueil-collections h2 {
+  color: #17263f;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.collection-carte {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #ffffff;
+  border: 1px solid #e1e5ed;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: left;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.collection-carte:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(20, 35, 60, 0.12);
+}
+
+.collection-icone {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.collection-carte h3 {
+  color: #17263f;
+  font-size: 1.3rem;
+  margin: 0 0 10px;
+}
+
+.collection-carte p {
+  color: #66758b;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 20px;
+}
+
+.collection-lien {
+  color: #304e78;
+  font-weight: 600;
+  margin-top: auto;
+}
+
+
 
 /* Responsive */
 
@@ -385,5 +502,21 @@ body {
 
   .pagination button {
     padding: 10px 12px;
+  }
+
+  .accueil-hero {
+    padding: 40px 25px;
+  }
+
+  .accueil-hero p {
+    font-size: 1rem;
+  }
+
+  .collections-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .collection-carte {
+    padding: 25px;
   }
 }
